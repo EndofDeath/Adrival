@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{569a34e6-7495-4802-a720-fbe21c3d055e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utilty">
+      <UniqueIdentifier>{fb5601f0-8402-48d0-9063-41478bfcff1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\concurrent">
+      <UniqueIdentifier>{462ceda7-367e-4ffc-b0c0-7b25c2ce6501}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utils">
+      <UniqueIdentifier>{7d0b4101-4c6b-44f9-b6c5-7cf59cbbb4a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test">
+      <UniqueIdentifier>{34acdb9c-24df-4ba1-804c-8bd92e727899}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="adrival.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="concurrent\event.cpp">
+      <Filter>src\concurrent</Filter>
+    </ClCompile>
+    <ClCompile Include="concurrent\semaphore.cpp">
+      <Filter>src\concurrent</Filter>
+    </ClCompile>
+    <ClCompile Include="concurrent\taskpool.cpp">
+      <Filter>src\concurrent</Filter>
+    </ClCompile>
+    <ClCompile Include="concurrent\thread_guards.cpp">
+      <Filter>src\concurrent</Filter>
+    </ClCompile>
+    <ClCompile Include="utility\adstring.cpp">
+      <Filter>src\utilty</Filter>
+    </ClCompile>
+    <ClCompile Include="testany.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="testfuturetask.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="testtaskpool.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="testcanstealqueue.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="testconcept.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="testevent.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="testfunctiontraits.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="testmemberfuntraits.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="testoptional.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="testsafequeue.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="testsimpletuple.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="testsemaphore.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="testpodplus.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="concurrent\Ithread.cpp">
+      <Filter>src\concurrent</Filter>
+    </ClCompile>
+    <ClCompile Include="testIthread.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="testseries.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="testlockfreequeue.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="concurrent\cansteal_queue.h">
+      <Filter>src\concurrent</Filter>
+    </ClInclude>
+    <ClInclude Include="concurrent\event.h">
+      <Filter>src\concurrent</Filter>
+    </ClInclude>
+    <ClInclude Include="concurrent\futuretask.h">
+      <Filter>src\concurrent</Filter>
+    </ClInclude>
+    <ClInclude Include="concurrent\taskpool.h">
+      <Filter>src\concurrent</Filter>
+    </ClInclude>
+    <ClInclude Include="concurrent\thread_guards.h">
+      <Filter>src\concurrent</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\concepts.h">
+      <Filter>src\utilty</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\function_traits.h">
+      <Filter>src\utilty</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\funtion_wrapper.h">
+      <Filter>src\utilty</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\indexsequence.h">
+      <Filter>src\utilty</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\memberfun_traits.h">
+      <Filter>src\utilty</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\Optional.h">
+      <Filter>src\utilty</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\simpletuple.h">
+      <Filter>src\utilty</Filter>
+    </ClInclude>
+    <ClInclude Include="concurrent\Semaphore.h">
+      <Filter>src\concurrent</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\any.h">
+      <Filter>src\utilty</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\SingletonT.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\adstring.h">
+      <Filter>src\utilty</Filter>
+    </ClInclude>
+    <ClInclude Include="concurrent\async.h">
+      <Filter>src\concurrent</Filter>
+    </ClInclude>
+    <ClInclude Include="concurrent\safequeue.h">
+      <Filter>src\concurrent</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\classhelper.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\nullptr.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\arrayhelper.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\podplus.h">
+      <Filter>src\utilty</Filter>
+    </ClInclude>
+    <ClInclude Include="concurrent\safecounter.h">
+      <Filter>src\concurrent</Filter>
+    </ClInclude>
+    <ClInclude Include="concurrent\Ithread.h">
+      <Filter>src\concurrent</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\series.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\timer.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\nocopyable.h">
+      <Filter>src\utilty</Filter>
+    </ClInclude>
+    <ClInclude Include="concurrent\lockfreequeue.h">
+      <Filter>src\concurrent</Filter>
+    </ClInclude>
+    <ClInclude Include="concurrent\blocksafequeue.h">
+      <Filter>src\concurrent</Filter>
+    </ClInclude>
+    <ClInclude Include="concurrent\ringqueue.h">
+      <Filter>src\concurrent</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\bussywait.h">
+      <Filter>src\utilty</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\fixedringbuffer.h">
+      <Filter>src\utilty</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
