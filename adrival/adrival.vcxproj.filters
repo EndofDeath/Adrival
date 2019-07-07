@@ -197,5 +197,14 @@
     <ClInclude Include="utility\fixedringbuffer.h">
       <Filter>src\utilty</Filter>
     </ClInclude>
+    <ClInclude Include="utility\arraywrapper.h">
+      <Filter>src\utilty</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\unboundqueue.h">
+      <Filter>src\utilty</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

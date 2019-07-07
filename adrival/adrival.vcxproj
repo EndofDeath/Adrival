@@ -191,6 +191,7 @@
     <ClInclude Include="concurrent\taskpool.h" />
     <ClInclude Include="concurrent\thread_guards.h" />
     <ClInclude Include="utility\any.h" />
+    <ClInclude Include="utility\arraywrapper.h" />
     <ClInclude Include="utility\bussywait.h" />
     <ClInclude Include="utility\concepts.h" />
     <ClInclude Include="utility\fixedringbuffer.h" />
@@ -203,6 +204,7 @@
     <ClInclude Include="utility\Optional.h" />
     <ClInclude Include="utility\podplus.h" />
     <ClInclude Include="utility\simpletuple.h" />
+    <ClInclude Include="utility\unboundqueue.h" />
     <ClInclude Include="utils\arrayhelper.h" />
     <ClInclude Include="utils\classhelper.h" />
     <ClInclude Include="utils\nullptr.h" />
