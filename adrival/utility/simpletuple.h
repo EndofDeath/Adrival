@@ -32,6 +32,8 @@ public:
 		:base(rest...)
 		, value(t)
 	{}
+	template<class T>
+	auto operator[](T&& t);
 	This value;
 };
 
@@ -85,6 +87,13 @@ class simpletuple_element < index, simpletuple<This, Types...>>:public simpletup
 	auto make_tuple(Types&& ...t)
 	{
 		return simpletuple<Types...>(std::forward<Types>(t)...);
+	}
+
+	template<class This, class ...Types>
+	template<class T>
+	inline auto simpletuple<This, Types...>::operator[](T && t)
+	{
+		return get<std::decay_t<T>::value>(*this);
 	}
 
 }
