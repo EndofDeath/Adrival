@@ -203,6 +203,9 @@
     <ClInclude Include="utility\unboundqueue.h">
       <Filter>src\utilty</Filter>
     </ClInclude>
+    <ClInclude Include="utility\type_traits.h">
+      <Filter>src\utilty</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

@@ -204,6 +204,7 @@
     <ClInclude Include="utility\Optional.h" />
     <ClInclude Include="utility\podplus.h" />
     <ClInclude Include="utility\simpletuple.h" />
+    <ClInclude Include="utility\type_traits.h" />
     <ClInclude Include="utility\unboundqueue.h" />
     <ClInclude Include="utils\arrayhelper.h" />
     <ClInclude Include="utils\classhelper.h" />

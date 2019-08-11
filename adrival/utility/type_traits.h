@@ -1,22 +1,53 @@
 #pragma once
 
+namespace adrival{
+
+	struct sfine
+	{
+	protected:
+		using one = char;
+		struct two
+		{
+			char c[2];
+		};
+	};
+
+	template<class _Ty>
+	_Ty&& declval() {};
+
 template<class T>
-class IsClass
+class is_class:public sfine
 {
 	template<class T>
-	static char trait(char T::*)
+	static one trait(char T::*)
 	{
 		return 0;
 	}
-	struct twochar
-	{
-		char mc[2];
-	};
 	template<class T>
-	static twochar trait(...)
+	static two trait(...)
 	{
 		return 0;
 	}
 public:
-	static const bool value = sizeof(decltype(trait<T>(0))) == 1;
+	static constexpr bool value = sizeof(decltype(trait<T>(0))) == 1;
 };
+
+template<class T>
+constexpr bool is_class_v = is_class<T>::value;
+
+template<class F,class ...Args>
+class is_invocable:public sfine
+{
+	template<class Fn,class ...args,class = decltype(declval<Fn>()(declval<args>()...))>
+	static one trait(int){}
+
+	template<class Fn, class ...args>
+	static two trait(...) {}
+public:
+	static constexpr bool value = sizeof(decltype(trait<F&&,Args&&...>(0))) == 1;
+};
+
+template<class F, class ...Args>
+constexpr bool is_invocable_v = is_invocable<F, Args...>::value;
+
+}
