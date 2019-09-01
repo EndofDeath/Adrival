@@ -99,6 +99,9 @@
     <ClCompile Include="testlockfreequeue.cpp">
       <Filter>test</Filter>
     </ClCompile>
+    <ClCompile Include="test_objectpool.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="concurrent\cansteal_queue.h">
@@ -204,6 +207,9 @@
       <Filter>src\utilty</Filter>
     </ClInclude>
     <ClInclude Include="utility\type_traits.h">
+      <Filter>src\utilty</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\objectpool.h">
       <Filter>src\utilty</Filter>
     </ClInclude>
   </ItemGroup>
