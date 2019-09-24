@@ -175,6 +175,7 @@
     <ClCompile Include="testsimpletuple.cpp" />
     <ClCompile Include="testtaskpool.cpp" />
     <ClCompile Include="test_objectpool.cpp" />
+    <ClCompile Include="test_smartptr.cpp" />
     <ClCompile Include="utility\adstring.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -191,6 +192,7 @@
     <ClInclude Include="concurrent\Semaphore.h" />
     <ClInclude Include="concurrent\taskpool.h" />
     <ClInclude Include="concurrent\thread_guards.h" />
+    <ClInclude Include="smart_ptr\smart_ptr.h" />
     <ClInclude Include="utility\any.h" />
     <ClInclude Include="utility\arraywrapper.h" />
     <ClInclude Include="utility\bussywait.h" />
