@@ -207,7 +207,7 @@
     <ClInclude Include="polymorphic.hpp" />
     <ClInclude Include="safequeue.hpp" />
     <ClInclude Include="semaphore.hpp" />
-    <ClInclude Include="series.h" />
+    <ClInclude Include="series.hpp" />
     <ClInclude Include="smart_ptr.hpp" />
     <ClInclude Include="smart_ptr\smart_ptr.h" />
     <ClInclude Include="taskpool.hpp" />

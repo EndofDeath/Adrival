@@ -5,7 +5,7 @@
 namespace adrival {
 
 	inline namespace series {
-		auto AP = [](int init, int step) {
+		auto AP = [](auto init, auto step) {
 			auto cur = init;
 			return [=]() mutable {
 				cur += step;
@@ -13,7 +13,7 @@ namespace adrival {
 			};
 		};
 
-		auto GP = [](int init, int step) {
+		auto GP = [](auto init, auto step) {
 			auto cur = init;
 			return [=]() mutable {
 				cur *= step;

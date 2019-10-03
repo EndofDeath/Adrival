@@ -2,7 +2,7 @@
 #include <iostream>
 #include <thread>
 #include <mutex>
-#include "../series.h"
+#include "../series.hpp"
 
 using namespace std::literals;
 

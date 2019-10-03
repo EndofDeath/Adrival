@@ -266,9 +266,6 @@
     <ClInclude Include="semaphore.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="series.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="tuple.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -279,6 +276,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="async.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="series.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
