@@ -48,61 +48,61 @@
     <ClCompile Include="utility\adstring.cpp">
       <Filter>src\utilty</Filter>
     </ClCompile>
-    <ClCompile Include="testany.cpp">
-      <Filter>test</Filter>
-    </ClCompile>
-    <ClCompile Include="testfuturetask.cpp">
-      <Filter>test</Filter>
-    </ClCompile>
-    <ClCompile Include="testtaskpool.cpp">
-      <Filter>test</Filter>
-    </ClCompile>
-    <ClCompile Include="testcanstealqueue.cpp">
-      <Filter>test</Filter>
-    </ClCompile>
-    <ClCompile Include="testconcept.cpp">
-      <Filter>test</Filter>
-    </ClCompile>
-    <ClCompile Include="testevent.cpp">
-      <Filter>test</Filter>
-    </ClCompile>
-    <ClCompile Include="testfunctiontraits.cpp">
-      <Filter>test</Filter>
-    </ClCompile>
-    <ClCompile Include="testmemberfuntraits.cpp">
-      <Filter>test</Filter>
-    </ClCompile>
-    <ClCompile Include="testoptional.cpp">
-      <Filter>test</Filter>
-    </ClCompile>
-    <ClCompile Include="testsafequeue.cpp">
-      <Filter>test</Filter>
-    </ClCompile>
-    <ClCompile Include="testsimpletuple.cpp">
-      <Filter>test</Filter>
-    </ClCompile>
-    <ClCompile Include="testsemaphore.cpp">
-      <Filter>test</Filter>
-    </ClCompile>
-    <ClCompile Include="testpodplus.cpp">
-      <Filter>test</Filter>
-    </ClCompile>
     <ClCompile Include="concurrent\Ithread.cpp">
       <Filter>src\concurrent</Filter>
     </ClCompile>
-    <ClCompile Include="testIthread.cpp">
+    <ClCompile Include="test\test_objectpool.cpp">
       <Filter>test</Filter>
     </ClCompile>
-    <ClCompile Include="testseries.cpp">
+    <ClCompile Include="test\test_smartptr.cpp">
       <Filter>test</Filter>
     </ClCompile>
-    <ClCompile Include="testlockfreequeue.cpp">
+    <ClCompile Include="test\testany.cpp">
       <Filter>test</Filter>
     </ClCompile>
-    <ClCompile Include="test_objectpool.cpp">
+    <ClCompile Include="test\testcanstealqueue.cpp">
       <Filter>test</Filter>
     </ClCompile>
-    <ClCompile Include="test_smartptr.cpp">
+    <ClCompile Include="test\testconcept.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\testevent.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\testfunctiontraits.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\testfuturetask.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\testIthread.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\testlockfreequeue.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\testmemberfuntraits.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\testoptional.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\testpodplus.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\testsafequeue.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\testsemaphore.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\testseries.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\testsimpletuple.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\testtaskpool.cpp">
       <Filter>test</Filter>
     </ClCompile>
   </ItemGroup>
@@ -217,6 +217,69 @@
     </ClInclude>
     <ClInclude Include="smart_ptr\smart_ptr.h">
       <Filter>src\utilty</Filter>
+    </ClInclude>
+    <ClInclude Include="taskpool.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="objectpool.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="smart_ptr.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="canstealqueue.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="polymorphic.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="any.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="event.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="function_traits.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="futuretask.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="thread.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lockfree.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="memberfun_traits.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="optional.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="podplus.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="safequeue.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="semaphore.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="series.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="tuple.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="thread_guards.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="circularqueue.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="async.hpp">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
