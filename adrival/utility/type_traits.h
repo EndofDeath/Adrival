@@ -29,7 +29,7 @@ class is_class:public sfine
 		return 0;
 	}
 public:
-	static constexpr bool value = sizeof(decltype(trait<T>(0))) == 1;
+	static constexpr bool value = sizeof(decltype(trait<T>(0))) == sizeof(one);
 };
 
 template<class T>
@@ -44,7 +44,7 @@ class is_invocable:public sfine
 	template<class Fn, class ...args>
 	static two trait(...) {}
 public:
-	static constexpr bool value = sizeof(decltype(trait<F&&,Args&&...>(0))) == 1;
+	static constexpr bool value = sizeof(decltype(trait<F&&,Args&&...>(0))) == sizeof(one);
 };
 
 template<class F, class ...Args>
