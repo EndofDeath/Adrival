@@ -21,36 +21,84 @@ mem_fun_pointer(const volatile)
 
 }
 
-#define has_men_fn(name)\
-template<typename T,typename R = void,typename ...Arg>\
-class has_mem_fn_##name\
-{\
-	struct twochar\
-	{\
-		char m[2];\
-	};\
-	template<typename T>\
-	static twochar trait_##name(...)\
-	{\
-		return 0;\
-	}\
-	template<typename T>\
-	static char trait_##name(decltype(adrival::mem_fn_pointer<T,R,Arg...>(&T::name)))\
-	{\
-		return 0;\
-	}\
-	template<typename T>\
-	static twochar trait_##name_noarg(...)\
-	{\
-		return 0;\
-	}\
-	template<typename T>\
-	static char trait_##name_noarg(decltype(adrival::mem_fn_pointer_noarg<T,R>(&T::name)))\
-	{\
-		return 0;\
-	}\
+#define HAS_MEMFN(name)\
+template<class T, class R=void,class...Arg>\
+class has_memfn_##name {\
+	static void trait_helper(R(T::*)(Arg...)) {}\
+	template<typename C>\
+	static auto trait(int)->decltype(trait_helper(&C::name), std::true_type{}) {};\
+	template<typename C> static std::false_type trait(...) {};\
 public:\
-	static const bool value = 0 < sizeof...(Arg) ? sizeof(decltype(trait_##name<T>(0))) == 1:sizeof(decltype(trait_##name_noarg<T>(0))) == 1 ;\
+	static constexpr bool value = decltype(trait<T>(0))::value;\
+};\
+template<class T, class R=void,class...Arg>\
+class has_memfn_##name##_c{ \
+	static void trait_helper(R(T::*)(Arg...) const) {}\
+	template<typename C>\
+	static auto trait(int)->decltype(trait_helper(&C::name), std::true_type{}) {};\
+	template<typename C> static std::false_type trait(...) {};\
+public:\
+	static constexpr bool value = decltype(trait<T>(0))::value;\
+};\
+template<class T, class R=void,class...Arg>\
+class has_memfn_##name##_v{ \
+	static void trait_helper(R(T::*)(Arg...) volatile) {}\
+	template<typename C>\
+	static auto trait(int)->decltype(trait_helper(&C::name), std::true_type{}) {};\
+	template<typename C> static std::false_type trait(...) {};\
+public:\
+	static constexpr bool value = decltype(trait<T>(0))::value;\
+};\
+template<class T, class R=void,class...Arg>\
+class has_memfn_##name##_cv{ \
+	static void trait_helper(R(T::*)(Arg...) const volatile) {}\
+	template<typename C>\
+	static auto trait(int)->decltype(trait_helper(&C::name), std::true_type{}) {};\
+	template<typename C> static std::false_type trait(...) {};\
+public:\
+	static constexpr bool value = decltype(trait<T>(0))::value;\
 };
 
+#define HAS_EXPLICIT_MEMFN(name)\
+template<class T,class R=void,class ...Arg>\
+class has_explicit_memfn_##name{\
+	template <typename U, U> struct explicit_has;\
+	template<typename C> static std::true_type trait(explicit_has <R(C::*)(Arg...), &C::name>*) {};\
+	template<typename C> static std::false_type trait(...) {};\
+public:\
+	static constexpr bool value = decltype(trait<T>(0))::value;\
+};\
+template<class T,class R=void,class ...Arg>\
+class has_explicit_memfn_##name##_c{\
+	template <typename U, U> struct explicit_has;\
+	template<typename C> static std::true_type trait(explicit_has <R(C::*)(Arg...) const, &C::name>*) {};\
+	template<typename C> static std::false_type trait(...) {};\
+public:\
+	static constexpr bool value = decltype(trait<T>(0))::value;\
+};\
+template<class T,class R=void,class ...Arg>\
+class has_explicit_memfn_##name##_v{\
+	template <typename U, U> struct explicit_has;\
+	template<typename C> static std::true_type trait(explicit_has <R(C::*)(Arg...) volatile, &C::name>*) {};\
+	template<typename C> static std::false_type trait(...) {};\
+public:\
+	static constexpr bool value = decltype(trait<T>(0))::value;\
+};\
+template<class T,class R=void,class ...Arg>\
+class has_explicit_memfn_##name##_cv{\
+	template <typename U, U> struct explicit_has;\
+	template<typename C> static std::true_type trait(explicit_has <R(C::*)(Arg...) const volatile, &C::name>*) {};\
+	template<typename C> static std::false_type trait(...) {};\
+public:\
+	static constexpr bool value = decltype(trait<T>(0))::value;\
+};
+
+#define HAS_CALLABLE_MEMFN(name)\
+template<class T, class...Arg>\
+class has_callable_memfn_##name{\
+	template<typename U> static auto trait(int) -> decltype(std::declval<U>().name(std::declval<Args>()...), std::true_type{}) {}\
+	template<typename U> static std::false_type trait(...) {}\
+public:\
+	static constexpr bool value = decltype(trait<T>(0))::value;\
+};
 #endif // !ADRIVAL_MENBERFUN_TRAITS_H

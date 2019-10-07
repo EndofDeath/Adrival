@@ -17,7 +17,7 @@ public:\
 	{\
 		using classtype = typename std::decay<T>::type;\
 		static_assert(std::is_class<classtype>::value, "the type isn't class");\
-		static_assert(has_mem_fn_##name<classtype, R, Arg...>::value, "the class is no matching member function");\
+		static_assert(has_memfn_##name<classtype, R, Arg...>::value, "the class is no matching member function");\
 		_fun = [&v](Arg... arg) {v.name(arg...);};\
 	}\
 	concept_##name(const concept_##name& rhs)\
@@ -64,7 +64,7 @@ public:\
 	{\
 		using classtype = typename std::decay<T>::type;\
 		static_assert(std::is_class<classtype>::value, "the type is not a class");\
-		static_assert(has_mem_fn_##name<classtype, void, Arg...>::value, "In the class,there are no matching member function");\
+		static_assert(has_memfn_##name<classtype, void, Arg...>::value, "In the class,there are no matching member function");\
 		_fun = [&v]( Arg... arg) {v.name(arg...);};\
 	}\
 	concept_##name(const concept_##name& rhs)\
@@ -101,7 +101,7 @@ private:\
 };\
 
 #define IMPLEMENT_CONCEPT(name)\
-	has_men_fn(name)\
+	HAS_MEMFN(name)\
 	DECLARE_CONCEPT(name)\
 
 #endif // !ADRIVAL_CONCEPT_H

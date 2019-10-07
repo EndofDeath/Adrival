@@ -14,7 +14,7 @@ public:
 	void print() const
 	{}
 
-	void print(int i) const
+	void print(int i)
 	{
 		std::cout << i << std::endl;
 	}

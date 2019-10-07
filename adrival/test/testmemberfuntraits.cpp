@@ -75,31 +75,45 @@ namespace {
 		}
 	};
 
-	has_men_fn(init)
-	has_men_fn(print)
+	HAS_MEMFN(init)
+	HAS_MEMFN(print)
 
+	HAS_EXPLICIT_MEMFN(init)
+	HAS_EXPLICIT_MEMFN(print)
 }
 
 
 void test_memberfuntrait()
 {
-	has_mem_fn_init<one, void, int>::value;
-	has_mem_fn_init<one>::value;
-	has_mem_fn_init<empty>::value;
+	has_memfn_init<one, void, int>::value;
+	has_memfn_init<one>::value;
+	has_memfn_init<empty>::value;
 
-	has_mem_fn_init<base>::value;
-	has_mem_fn_init<deriveda>::value;
-	has_mem_fn_init<derivedb>::value;
-	has_mem_fn_init<derivedc>::value;
-	has_mem_fn_init<derivedd>::value;
+	has_memfn_init<base>::value;
+	has_memfn_init<deriveda>::value;
+	has_memfn_init<derivedb>::value;
+	has_memfn_init<derivedc>::value;
+	has_memfn_init<derivedd>::value;
 
-	has_mem_fn_print<one, void, int>::value;
-	has_mem_fn_print<one>::value;
-	has_mem_fn_print<empty>::value;
+	has_memfn_print<one, void, int>::value;
+	has_memfn_print<one>::value;
+	has_memfn_print<empty>::value;
 
-	has_mem_fn_print<base>::value;
-	has_mem_fn_print<deriveda>::value;
-	has_mem_fn_print<derivedb>::value;
-	has_mem_fn_print<derivedc>::value;
-	has_mem_fn_print<derivedd>::value;
+	has_memfn_print<base>::value;
+	has_memfn_print<deriveda>::value;
+	has_memfn_print<derivedb>::value;
+	has_memfn_print<derivedc>::value;
+	has_memfn_print<derivedd>::value;
+
+	has_explicit_memfn_init<base>::value;
+	has_explicit_memfn_init<deriveda>::value;
+	has_explicit_memfn_init<derivedb>::value;
+	has_explicit_memfn_init<derivedc>::value;
+	has_explicit_memfn_init<derivedd>::value;
+
+	has_explicit_memfn_print<base>::value;
+	has_explicit_memfn_print<deriveda>::value;
+	has_explicit_memfn_print<derivedb>::value;
+	has_explicit_memfn_print<derivedc>::value;
+	has_explicit_memfn_print<derivedd>::value;
 }
