@@ -3,6 +3,7 @@
 #pragma once
 
 #include <type_traits>
+#include <atomic>
 #include "../utility/type_traits.h"
 
 namespace adrival {
@@ -15,8 +16,7 @@ struct ref_count_base
 	}
 	void decref()
 	{
-		use_count_--;
-		if (0 == use_count_)
+		if (1 == use_count_--)
 		{
 			destroy();
 			delete_();
@@ -24,12 +24,12 @@ struct ref_count_base
 	}
 	size_t use_count() const
 	{
-		return use_count_;
+		return use_count_.load();
 	}
 private:
 	virtual void destroy() = 0;
 	virtual void delete_() = 0;
-	size_t use_count_{ 1 };
+	std::atomic_size_t use_count_{ 1 };
 };
 
 template<class type>
